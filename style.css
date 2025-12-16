@@ -1,0 +1,153 @@
+/* ===================== BASE ===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    background: #f2f2f2;
+    color: #333;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background: linear-gradient(90deg, #0077cc, #00aaff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===================== SECCIONES ===================== */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0077cc;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* ===================== GALERÍA ===================== */
+.productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.productos .item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.productos .item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===================== FORMULARIO ===================== */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    gap: 15px;
+}
+
+input, textarea, button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    background: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0077cc;
+    color: white;
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Tablets */
+@media (min-width: 768px) {
+    header nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Escritorio */
+@media (min-width: 992px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    section h2 {
+        font-size: 2.5rem;
+    }
+    section p {
+        font-size: 1.2rem;
+    }
+}
